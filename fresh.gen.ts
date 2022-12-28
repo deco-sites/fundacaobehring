@@ -9,7 +9,7 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
+import * as $$$0 from "./sections/Footer.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$2 from "./sections/Markdown.tsx";
 import * as $$$3 from "./sections/QuillText.tsx";
@@ -24,27 +24,93 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Footer.tsx": $$$0,
     "./sections/Head.tsx": $$$1,
     "./sections/Markdown.tsx": $$$2,
     "./sections/QuillText.tsx": $$$3,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
-    "./sections/GetStarted.tsx": {
+    "./sections/Footer.tsx": {
       "inputSchema": {
-        "title": " Get Started",
+        "title": " Footer",
         "type": "object",
         "properties": {
-          "enableInspectVSCode": {
-            "type": [
-              "boolean",
-              "null",
+          "abstract": {
+            "type": "string",
+            "title": "Abstract",
+          },
+          "copyright": {
+            "type": "string",
+            "title": "Copyright",
+          },
+          "siteMap": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "title": "Title",
+                },
+                "href": {
+                  "type": "string",
+                  "title": "Href",
+                },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "title": "Title",
+                      },
+                      "href": {
+                        "type": "string",
+                        "title": "Href",
+                      },
+                    },
+                    "required": [
+                      "title",
+                      "href",
+                    ],
+                  },
+                  "title": "Links",
+                },
+              },
+              "required": [
+                "title",
+                "href",
+              ],
+            },
+            "title": "Site Map",
+          },
+          "developerBy": {
+            "title": "Developer By",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name",
+              },
+              "href": {
+                "type": "string",
+                "title": "Href",
+              },
+            },
+            "required": [
+              "name",
+              "href",
             ],
-            "title": "Enable Inspect V S Code",
           },
         },
-        "required": [],
+        "required": [
+          "abstract",
+          "copyright",
+          "siteMap",
+          "developerBy",
+        ],
       },
       "outputSchema": null,
     },

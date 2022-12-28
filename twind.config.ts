@@ -1,22 +1,24 @@
 /** @type {import('$fresh/plugins/twind').Options} */
 export default {
+  plugins: {
+    "my-container": "w-full my-0 mx-auto px-[10vw] md:(px-[8vw]) sm:(px-[8vw])"
+  },
   theme: {
     extend: {
       screens: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px",
-        "2xl": "1536px",
+        sm: "599px",
+        md: "1099px",
       },
       colors: {
-        primary: "#2FD180",
-        "primary-dark": "#003232",
-        "primary-light": "#C5FFE9",
-        transparent: "transparent",
+        "white": "#ffffff",
+        "blue": "#0e649f",
+        "blue-dark": "#1e1a62",
+        "green": "#00b030",
+        "green-dark": "#005d2b",
+        "gray": "#4c4c4c"
       },
       fontFamily: {
-        sans: ["Albert Sans", "sans-serif"],
+        sans: ["Poppins", "Calibri", "Lucida Grande", "sans-serif"],
         serif: ["serif"],
       },
     },
