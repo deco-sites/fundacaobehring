@@ -66,7 +66,7 @@ export default function Footer( props: Props ) {
             </ul>
           </div>
 
-          <div><a href=""><img class="w-40" src="https://fundacaobehring.org/website/wp-content/themes/behring-theme/img/logo-vertical-neg-eng@2x.png" alt=""/></a></div>
+          <div><a href=""><img class="w-40" src="./white-logo.png" alt=""/></a></div>
         </div>
       </div>
     </section>
