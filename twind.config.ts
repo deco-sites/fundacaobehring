@@ -15,7 +15,11 @@ export default {
         "blue-dark": "#1e1a62",
         "green": "#00b030",
         "green-dark": "#005d2b",
-        "gray": "#4c4c4c"
+        "gray": "#4c4c4c",
+
+        "primary": "#2FD180",
+        "primary-dark": "#003232",
+        "primary-light": "#C5FFE9",
       },
       fontFamily: {
         sans: ["Poppins", "Calibri", "Lucida Grande", "sans-serif"],

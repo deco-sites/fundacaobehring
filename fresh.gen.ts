@@ -10,9 +10,10 @@ import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/Footer.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
-import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$1 from "./sections/GetStarted.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Markdown.tsx";
+import * as $$$4 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -25,9 +26,10 @@ const manifest: DecoManifest = {
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
     "./sections/Footer.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
-    "./sections/QuillText.tsx": $$$3,
+    "./sections/GetStarted.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Markdown.tsx": $$$3,
+    "./sections/QuillText.tsx": $$$4,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
@@ -78,6 +80,24 @@ const manifest: DecoManifest = {
                   },
                   "title": "Links",
                 },
+                "extra": {
+                  "title": "Extra",
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                    },
+                    "href": {
+                      "type": "string",
+                      "title": "Href",
+                    },
+                  },
+                  "required": [
+                    "title",
+                    "href",
+                  ],
+                },
               },
               "required": [
                 "title",
@@ -111,6 +131,23 @@ const manifest: DecoManifest = {
           "siteMap",
           "developerBy",
         ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/GetStarted.tsx": {
+      "inputSchema": {
+        "title": " Get Started",
+        "type": "object",
+        "properties": {
+          "enableInspectVSCode": {
+            "type": [
+              "boolean",
+              "null",
+            ],
+            "title": "Enable Inspect V S Code",
+          },
+        },
+        "required": [],
       },
       "outputSchema": null,
     },
